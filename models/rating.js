@@ -6,6 +6,7 @@ const mongoose = require('mongoose'),
         post_id: { type: mongoose.Schema.ObjectId, ref: 'Post' },
         rate: { type: Number, required: true },
         comment: { type: String, sparse: true },
+        
         is_blocked: { type: Boolean, default: false },
         is_deleted: { type: Boolean, default: false },
         created_on: { type: Date, default: Date.now() },
